@@ -1,0 +1,122 @@
+body{
+    background: linear-gradient(to top, rgb(2, 2, 39)20%, rgb(0, 0, 0)100%);
+    text-align: center;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px 10px 10px 10px;
+}
+#header{
+    background-color: rgb(195, 208, 245,0.17);
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    height:15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    border: 2px solid white;
+    border-radius: 10px 10px 0px 0px;
+}
+#screen{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* padding-right: 20px; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px solid rgb(148, 177, 241);
+    /* border-radius: 10px; */
+}
+input{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(239, 240, 241, 0);
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 30px;
+}
+#calculator{
+    height: 65vh;
+    background-color: rgb(238, 240, 255,0.1);
+    border: 2px solid white;
+    border-radius: 0px 0px 10px 10px;
+    padding:1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#line1{
+    height: 20.75%;
+    width:68.7%;
+    display: flex;
+    justify-content:space-around;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.operator{
+    width:15.7%;
+    height:50%;
+    background: linear-gradient(to top, rgb(171, 170, 170)0%, rgb(255, 255, 255)100%);
+    /* padding: 2px; */
+    font-size: 20px;
+    font-weight: 900;
+    border: 0px solid rgb(5, 5, 5);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(192, 192, 192);
+    margin: 10px;
+}
+#nextline{
+    height: 67.5%;
+    width: 70%;
+    display: flex;
+    justify-content:space-around;
+}
+#numbers{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    width:70%;
+    align-items: center;
+}
+#operations{
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+    width: 20%;;
+    flex-direction: column;
+    align-items: center;
+}
+.nrow{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.number{
+    width: 20.4%;
+    height: 80%;
+    background: linear-gradient(to top, rgb(114, 170, 254)0%, rgb(255, 255, 255)100%);
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 900;
+    border: 0px solid rgb(5, 5, 5);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(192, 192, 192);
+    margin: 10px;
+}
+.calc_operator{
+    width: 80%;
+    background: linear-gradient(to top, rgb(171, 170, 170)0%, rgb(255, 255, 255)100%);
+    padding: 2px;
+    font-size: 20px;
+    font-weight: 900;
+    border: 0px solid rgb(5, 5, 5);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(192, 192, 192);  
+    margin: 10px;
+}
