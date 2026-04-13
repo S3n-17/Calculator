@@ -1,8 +1,10 @@
 let num = document.querySelectorAll(".number");
 let operators = document.querySelectorAll(".calc_operator");
-let clearButton = document.getElementById("AC/CE");
+let brckts = document.querySelectorAll(".operator");
+let ACButton = document.getElementById("AC");
+let CEButton = document.getElementById("CE");
 let inp = document.getElementById("input");
-let scr= document.getElementById("screen");
+let scr = document.getElementById("screen");
 let l = [];
 var v = "";
 let result;
@@ -12,11 +14,23 @@ function calculate() {
     operators.forEach((operator) => {
         operator.addEventListener("click", () => {
             c = operator.innerText;
-            scr.innerText+= c;
+            scr.innerText += c;
             console.log(scr.innerText);
             l.push(c);
             console.log(l);
             CE();
+        });
+    });
+    brckts.forEach((brckt) => {
+        brckt.addEventListener("click", () => {
+            b = brckt.innerText;
+            if(b == ")" || b == "("){
+                scr.innerText += b;
+                l.push(b);
+                console.log(l);
+                CE();
+                AC();
+            }
         });
     });
     num.forEach((number) => {
@@ -27,16 +41,24 @@ function calculate() {
                 l.push(n);
                 console.log(l);
                 CE();
+                AC();
             }
             else {
                 console.log("ARRAY:", l);
-                result = eval(l.join(""));
-                // scr.innerText = "";
-                console.log(result);
-                scr.innerText = result;
-                AC(result);
-                l = [result];
-                
+                if (l.length > 16) {
+                    scr.innerText = "Error: Too many characters";
+                    AC();
+                }
+                else {
+                    result = eval(l.join(""));
+                    // scr.innerText = "";
+                    console.log(result);
+                    scr.innerText = result;
+                    AC();
+                    CE();
+                    l = [result];
+                }
+
             }
 
         });
@@ -46,21 +68,17 @@ function calculate() {
 }
 
 function CE() {
-    if (scr.innerText != "") {
-        clearButton.innerText = "CE";
-        clearButton.onclick = () => {
-            scr.innerText = scr.innerText.slice(0, -1);
-            l.pop();
-        };
-    }
+    CEButton.onclick = () => {
+        scr.innerText = scr.innerText.slice(0, -1);
+        l.pop();
+    };
+
 }
 
-function AC(result) {
-    if (scr.innerText == result || scr.innerText == "" ) {
-        clearButton.innerText = "AC";
-        clearButton.onclick = () => {
-            scr.innerText = "";
-            l = [];
-        };
-    }
+function AC() {
+    ACButton.onclick = () => {
+        scr.innerText = "";
+        l = [];
+    };
+
 }
