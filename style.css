@@ -21,10 +21,14 @@ body{
 }
 #screen{
     height: 20vh;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: right;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* padding-right: 20px; */
+    padding-right: 30px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 2px solid rgb(148, 177, 241);
     /* border-radius: 10px; */
@@ -120,3 +124,4 @@ input{
     box-shadow: 2px 2px 2px 2px rgb(192, 192, 192);  
     margin: 10px;
 }
+
